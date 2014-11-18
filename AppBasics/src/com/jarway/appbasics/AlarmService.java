@@ -9,6 +9,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -24,7 +25,28 @@ public class AlarmService extends Service {
 		super.onCreate();
 	}
 	
-	private void showNotification() {
+	private void showNotification() {		
+		NotificationManager notifiManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE); 
+		Notification.Builder notifiBuilder = new Notification.Builder(this);
+		
+		Intent launchIntent = new Intent(this, MainActivity.class);
+		PendingIntent pendIntent = PendingIntent.getActivity(
+				this, 0, launchIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+		
+		notifiBuilder.setContentIntent(pendIntent)
+			.setDefaults(Notification.DEFAULT_ALL)
+			.setSmallIcon(R.drawable.ic_launcher)
+			//.setLargeIcon(BitmapFactory.decodeResource(res, R.drawable.ic_launcher))
+			.setTicker("Alarm...")
+			.setContentTitle("Alarm from App Basics")
+			.setContentText(new Date().toString())
+			.setAutoCancel(true);
+		
+		Notification notifi = notifiBuilder.getNotification();
+		notifiManager.notify(0, notifi);
+		
+		// Old usage before API 11
+		/*
     	Intent intent = new Intent(this, MainActivity.class);
     	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     	PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
@@ -37,6 +59,7 @@ public class AlarmService extends Service {
     	
     	NotificationManager notificationMngr = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
     	notificationMngr.notify(0, notification);
+		*/
 	}
 	
 	@Override
