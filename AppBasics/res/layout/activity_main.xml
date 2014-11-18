@@ -9,8 +9,31 @@
     tools:context="com.jarway.appbasics.MainActivity" >
 
     <TextView
+        android:id="@+id/alarmSvcText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Alarm Service"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <Button
+        android:id="@+id/stopAlarmSvcBtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/startAlarmSvcBtn"
+        android:layout_alignBottom="@+id/startAlarmSvcBtn"
+        android:layout_toRightOf="@+id/startAlarmSvcBtn"
+        android:onClick="onStopAlarmSvcClick"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/startAlarmSvcBtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/alarmSvcText"
+        android:layout_below="@+id/alarmSvcText"
+        android:onClick="onStartAlarmSvcClick"
+        android:text="Start" />
 
 </RelativeLayout>
