@@ -29,9 +29,10 @@ public class AlarmService extends Service {
 		NotificationManager notifiManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE); 
 		Notification.Builder notifiBuilder = new Notification.Builder(this);
 		
-		Intent launchIntent = new Intent(this, MainActivity.class);
+		Intent intent = new Intent(this, MainActivity.class);
+		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 		PendingIntent pendIntent = PendingIntent.getActivity(
-				this, 0, launchIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+				this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 		
 		notifiBuilder.setContentIntent(pendIntent)
 			.setDefaults(Notification.DEFAULT_ALL)
