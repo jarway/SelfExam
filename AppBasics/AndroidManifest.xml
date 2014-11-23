@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <service android:name="AlarmService"></service>
+        <activity android:name="DrawableActivity"></activity>
     </application>
 
 </manifest>
