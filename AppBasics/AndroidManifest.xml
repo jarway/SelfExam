@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="12"
         android:targetSdkVersion="19" />
 
     <application
@@ -24,6 +24,7 @@
         </activity>
         <service android:name="AlarmService"></service>
         <activity android:name="DrawableActivity"></activity>
+        <activity android:name="CrossfadeActivity"></activity>
     </application>
 
 </manifest>

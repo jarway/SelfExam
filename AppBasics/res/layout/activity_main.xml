@@ -43,6 +43,15 @@
         android:layout_alignLeft="@+id/startAlarmSvcBtn"
         android:layout_below="@+id/startAlarmSvcBtn"
         android:onClick="onDrawableActClick"
-        android:text="Drawable Activity" />
+        android:text="Drawable Act" />
+
+    <Button
+        android:id="@+id/crossfadeActBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stopAlarmSvcBtn"
+        android:layout_toRightOf="@+id/drawableActBtn"
+        android:onClick="onCrossfadeActClick"
+        android:text="Crossfade Act" />
 
 </RelativeLayout>

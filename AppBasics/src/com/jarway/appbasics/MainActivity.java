@@ -42,4 +42,10 @@ public class MainActivity extends ActionBarActivity {
     	Intent intent = new Intent(this, DrawableActivity.class);
     	startActivity(intent);
     }
+    
+    public void onCrossfadeActClick(View view) {
+    	Log.i(TAG, "onCrossfadeActClick");
+    	Intent intent = new Intent(this, CrossfadeActivity.class);
+    	startActivity(intent);
+    }
 }
