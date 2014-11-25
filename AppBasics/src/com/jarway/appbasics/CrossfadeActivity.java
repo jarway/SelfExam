@@ -1,9 +1,14 @@
 package com.jarway.appbasics;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 
@@ -12,6 +17,13 @@ public class CrossfadeActivity extends Activity {
 	private View mContentView;
 	private View mLoadingView;
 	private int mShortAnimationDuration;
+		
+	private Handler mHandler = new Handler() {
+		public void handleMessage(android.os.Message msg) {
+			Log.i(TAG, "handleMessage in mHandler");
+			crossfade();
+		}
+	};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +37,10 @@ public class CrossfadeActivity extends Activity {
 		mContentView.setVisibility(View.GONE);
 		mShortAnimationDuration = getResources().getInteger(
 				android.R.integer.config_shortAnimTime);
+		
+		mHandler.sendEmptyMessageDelayed(0, 2000);
 	}
-	
+
 	private void crossfade() {
 		mContentView.setAlpha(0f);
 		mContentView.setVisibility(View.VISIBLE);
