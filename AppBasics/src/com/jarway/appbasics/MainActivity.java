@@ -1,5 +1,7 @@
 package com.jarway.appbasics;
 
+import com.jarway.appbasics.slide.SlideActivity;
+
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,6 +48,12 @@ public class MainActivity extends ActionBarActivity {
     public void onCrossfadeActClick(View view) {
     	Log.i(TAG, "onCrossfadeActClick");
     	Intent intent = new Intent(this, CrossfadeActivity.class);
+    	startActivity(intent);
+    }
+    
+    public void onSlideActClick(View view) {
+    	Log.i(TAG, "onSlideActClick");
+    	Intent intent = new Intent(this, SlideActivity.class);
     	startActivity(intent);
     }
 }

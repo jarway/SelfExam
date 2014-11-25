@@ -54,4 +54,13 @@
         android:onClick="onCrossfadeActClick"
         android:text="Crossfade Act" />
 
+    <Button
+        android:id="@+id/slideActBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/drawableActBtn"
+        android:layout_below="@+id/drawableActBtn"
+        android:onClick="onSlideActClick"
+        android:text="Slide Act" />
+
 </RelativeLayout>
