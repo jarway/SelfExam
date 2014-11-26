@@ -23,6 +23,7 @@ public class SlideActivity extends FragmentActivity {
 		mPager = (ViewPager)findViewById(R.id.pager);
 		mPagerAdapter = new SlidePagerAdapter(getSupportFragmentManager());
 		mPager.setAdapter(mPagerAdapter);
+		mPager.setPageTransformer(true, new ZoomOutPageTransformer());
 	}
 	
 	@Override

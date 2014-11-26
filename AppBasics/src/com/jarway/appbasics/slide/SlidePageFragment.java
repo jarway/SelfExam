@@ -23,6 +23,22 @@ public class SlidePageFragment extends Fragment {
 		ViewGroup rootView = (ViewGroup)inflater.inflate(
 				R.layout.fragment_slide_page, container, false);
 		
+		int bgColor;
+		switch (mPageNumber) {
+		case 0:
+			bgColor = 0xffc981db;
+			break;
+		case 1:
+			bgColor = 0xff18cff0;
+			break;
+		case 2:
+			bgColor = 0xff97de62;
+			break;
+		default:
+			bgColor = 0xffffffff;
+		}
+		rootView.setBackgroundColor(bgColor);
+		
 		TextView titleText = (TextView)rootView.findViewById(R.id.titleText);
 		titleText.setText(getString(R.string.title_template_step, mPageNumber + 1));
 		
