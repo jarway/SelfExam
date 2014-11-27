@@ -1093,6 +1093,7 @@ containing a value of this type.
         public static final int shape_rect=0x7f02005e;
     }
     public static final class id {
+        public static final int RelativeLayout1=0x7f06004a;
         public static final int action_bar=0x7f06001c;
         public static final int action_bar_activity_content=0x7f060015;
         public static final int action_bar_container=0x7f06001b;
@@ -1104,7 +1105,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f060016;
         public static final int action_menu_presenter=0x7f060017;
         public static final int action_mode_close_button=0x7f060024;
-        public static final int action_settings=0x7f06004f;
+        public static final int action_settings=0x7f060053;
         public static final int activity_chooser_view_content=0x7f060025;
         public static final int alarmSvcText=0x7f060043;
         public static final int always=0x7f06000b;
@@ -1138,7 +1139,10 @@ containing a value of this type.
         public static final int never=0x7f060009;
         public static final int none=0x7f060010;
         public static final int normal=0x7f060000;
-        public static final int pager=0x7f06004a;
+        public static final int pageOneBtn=0x7f06004c;
+        public static final int pageThreeBtn=0x7f06004e;
+        public static final int pageTwoBtn=0x7f06004d;
+        public static final int pager=0x7f06004b;
         public static final int progress_circular=0x7f060018;
         public static final int progress_horizontal=0x7f060019;
         public static final int radio=0x7f06002f;
@@ -1159,16 +1163,16 @@ containing a value of this type.
         public static final int showHome=0x7f060004;
         public static final int showTitle=0x7f060006;
         public static final int slideActBtn=0x7f060048;
-        public static final int slideText=0x7f06004e;
+        public static final int slideText=0x7f060052;
         public static final int split_action_bar=0x7f06001e;
         public static final int startAlarmSvcBtn=0x7f060045;
         public static final int stopAlarmSvcBtn=0x7f060044;
         public static final int submit_area=0x7f060039;
         public static final int tabMode=0x7f060002;
-        public static final int text1=0x7f06004b;
-        public static final int textView2=0x7f06004c;
+        public static final int text1=0x7f06004f;
+        public static final int textView2=0x7f060050;
         public static final int title=0x7f06002b;
-        public static final int titleText=0x7f06004d;
+        public static final int titleText=0x7f060051;
         public static final int top_action_bar=0x7f060020;
         public static final int up=0x7f060021;
         public static final int useLogo=0x7f060003;

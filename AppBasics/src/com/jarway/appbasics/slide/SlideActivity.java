@@ -9,8 +9,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
+import android.view.View;
 
 public class SlideActivity extends FragmentActivity {
+	private static final String TAG = "appbasics.SlideActivity";
 	private static final int NUM_PAGES = 3;
 	private ViewPager mPager;
 	private PagerAdapter mPagerAdapter; //provide pages to the view pager.
@@ -24,6 +27,21 @@ public class SlideActivity extends FragmentActivity {
 		mPagerAdapter = new SlidePagerAdapter(getSupportFragmentManager());
 		mPager.setAdapter(mPagerAdapter);
 		mPager.setPageTransformer(true, new ZoomOutPageTransformer());
+	}
+	
+	public void onPageOneClick(View view) {
+		Log.i(TAG, "onPageOneClick");
+		mPager.setCurrentItem(0);
+	}
+
+	public void onPageTwoClick(View view) {
+		Log.i(TAG, "onPageTwoClick");
+		mPager.setCurrentItem(1);
+	}
+	
+	public void onPageThreeClick(View view) {
+		Log.i(TAG, "onPageThreeClick");
+		mPager.setCurrentItem(2);
 	}
 	
 	@Override
