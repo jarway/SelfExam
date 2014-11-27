@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="12"
+        android:minSdkVersion="13"
         android:targetSdkVersion="19" />
 
     <application
@@ -26,6 +26,7 @@
         <activity android:name="DrawableActivity"></activity>
         <activity android:name="CrossfadeActivity"></activity>
         <activity android:name=".slide.SlideActivity"></activity>
+        <activity android:name="CardFlipActivity"></activity>
     </application>
 
 </manifest>

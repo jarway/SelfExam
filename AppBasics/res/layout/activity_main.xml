@@ -63,4 +63,13 @@
         android:onClick="onSlideActClick"
         android:text="Slide Act" />
 
+    <Button
+        android:id="@+id/cardFlipActBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drawableActBtn"
+        android:layout_toRightOf="@+id/slideActBtn"
+        android:onClick="onCardFlipActClick"
+        android:text="CardFlip Act" />
+
 </RelativeLayout>

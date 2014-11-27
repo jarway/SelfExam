@@ -56,4 +56,10 @@ public class MainActivity extends ActionBarActivity {
     	Intent intent = new Intent(this, SlideActivity.class);
     	startActivity(intent);
     }
+    
+    public void onCardFlipActClick(View view) {
+    	Log.i(TAG, "onCardFlipActClick");
+    	Intent intent = new Intent(this, CardFlipActivity.class);
+    	startActivity(intent);    	
+    }
 }
