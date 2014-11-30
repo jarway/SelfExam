@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <service android:name="AlarmService"></service>
-        <activity android:name="DrawableActivity"></activity>
+        <activity android:name=".draw.DrawableActivity"></activity>
         <activity android:name="CrossfadeActivity"></activity>
         <activity android:name=".slide.SlideActivity"></activity>
         <activity android:name="CardFlipActivity"></activity>

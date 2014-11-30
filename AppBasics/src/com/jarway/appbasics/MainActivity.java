@@ -1,5 +1,6 @@
 package com.jarway.appbasics;
 
+import com.jarway.appbasics.draw.DrawableActivity;
 import com.jarway.appbasics.slide.SlideActivity;
 
 import android.support.v7.app.ActionBarActivity;

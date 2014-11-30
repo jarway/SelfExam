@@ -1,4 +1,9 @@
-package com.jarway.appbasics;
+package com.jarway.appbasics.draw;
+
+import com.jarway.appbasics.R;
+import com.jarway.appbasics.R.drawable;
+import com.jarway.appbasics.R.id;
+import com.jarway.appbasics.R.layout;
 
 import android.app.Activity;
 import android.content.res.Resources;
@@ -71,5 +76,11 @@ public class DrawableActivity extends Activity {
 		//paint image source on top of glow
 		canvas.drawBitmap(srcBmp, 0, 0, null); 
 		return dstBmp;
+	}
+	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		Log.i(TAG, "onDestroy");
 	}
 }
